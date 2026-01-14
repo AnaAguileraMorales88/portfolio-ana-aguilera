@@ -1,30 +1,25 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Bootcamp from './components/Bootcamp/Bootcamp';
-import Projects from './components/Projects/Projects';
-import Experience from './components/Experience/Experience';
-import Cv from './components/Cv/Cv';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
-import './App.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen text-text-main overflow-x-hidden selection:bg-primary/30">
       <Navbar />
       <main>
         <Hero />
         <About />
-        <Bootcamp />
+        <Skills />
         <Projects />
         <Experience />
-        <Cv />
-        <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-# Portfolio – Ana Aguilera Morales
+# EXPERIMENTANDO CON JULES, ANTIGRAVITY Y SLIPLANE
 
 Este proyecto forma parte de mi proceso de aprendizaje y experimentación. 
 Se trata de un **portfolio experimental**, creado con el objetivo de **probar y comparar el uso de distintas herramientas de Inteligencia Artificial aplicadas al desarrollo web**, 

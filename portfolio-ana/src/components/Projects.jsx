@@ -1,26 +1,26 @@
 import React from 'react';
 
 const ProjectCard = ({ title, description, tags, link }) => (
-    <div className="glass-card p-6 flex flex-col h-full group">
-        <div className="flex-1">
-            <div className="flex items-center gap-2 mb-4">
-                <span className="text-2xl">🌱</span>
+    <article className="glass-card p-6 flex flex-col h-full group">
+        <section className="flex-1">
+            <header className="flex items-center gap-2 mb-4">
+                <span className="text-2xl" role="img" aria-label="sprout">🌱</span>
                 <h3 className="text-xl font-display font-bold group-hover:text-primary transition-colors">
                     {title}
                 </h3>
-            </div>
+            </header>
             <p className="text-text-muted text-sm mb-6 line-clamp-3">
                 {description}
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-6">
+            <ul className="flex flex-wrap gap-2 mb-6" aria-label="Tags">
                 {tags.map((tag) => (
-                    <span key={tag} className="text-xs px-2 py-1 rounded bg-white/10 text-gray-300">
+                    <li key={tag} className="text-xs px-2 py-1 rounded bg-white/10 text-gray-300">
                         {tag}
-                    </span>
+                    </li>
                 ))}
-            </div>
-        </div>
+            </ul>
+        </section>
 
         <a
             href={link}
@@ -29,7 +29,7 @@ const ProjectCard = ({ title, description, tags, link }) => (
         >
             Visit Site
         </a>
-    </div>
+    </article>
 );
 
 const Projects = () => {
@@ -56,17 +56,19 @@ const Projects = () => {
 
     return (
         <section id="projects" className="py-20 px-4">
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl font-display font-bold text-center mb-16">
-                    <span className="border-b-2 border-primary/30 pb-2">Projects</span>
-                </h2>
+            <section className="max-w-7xl mx-auto">
+                <header className="text-center mb-16">
+                    <h2 className="text-4xl font-display font-bold">
+                        <span className="border-b-2 border-primary/30 pb-2">Projects</span>
+                    </h2>
+                </header>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <ProjectCard key={index} {...project} />
                     ))}
-                </div>
-            </div>
+                </section>
+            </section>
         </section>
     );
 };

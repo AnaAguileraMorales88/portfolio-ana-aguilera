@@ -9,17 +9,17 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen text-text-main overflow-x-hidden selection:bg-primary/30">
+    <main className="min-h-screen text-text-main overflow-x-hidden selection:bg-primary/30">
       <Navbar />
-      <main>
+      <section>
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Experience />
-      </main>
+      </section>
       <Footer />
-    </div>
+    </main>
   );
 }
 
